@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kef-kD-Wv1" detailTextLabel="Iw0-pf-x8y" style="IBUITableViewCellStyleSubtitle" id="YAz-CZ-rSz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetMeUpCell" textLabel="kef-kD-Wv1" detailTextLabel="Iw0-pf-x8y" imageView="7ro-Nh-bj3" style="IBUITableViewCellStyleSubtitle" id="YAz-CZ-rSz">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YAz-CZ-rSz" id="qMM-ao-4W6">
@@ -44,10 +44,17 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     </variation>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="meetup" id="7ro-Nh-bj3">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="NDO-bC-2Lu"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="yZA-ry-Khs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,6 +88,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="RIf-Qs-8Ez"/>
+                    <connections>
+                        <outlet property="meetupTableView" destination="dsX-3R-4gI" id="tUM-6E-kfu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,4 +115,7 @@
             <point key="canvasLocation" x="222" y="-390"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meetup" width="60" height="60"/>
+    </resources>
 </document>
